@@ -316,6 +316,19 @@ app.post(/^\/([^.]+)$/, function (req, res) {
   res.redirect('/' + req.params[0])
 })
 
+// catch 404 and forward to error handler
+app.use(function (req, res, next) {
+  var err = new Error('Page not found')
+  err.status = 404
+  next(err)
+})
+
+// display error
+app.use(function (err, req, res, next) {
+  res.status(err.status || 500)
+  res.send(err.message)
+})
+
 console.log('\nGOV.UK Prototype Kit v' + releaseVersion)
 console.log('\nNOTICE: the kit is for building prototypes, do not use it for production services.')
 
