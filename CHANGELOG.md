@@ -2,6 +2,7 @@
 
 New features:
 
+- [#553 Add backwards compatibility - support for prototypes made in Version 6 of the Prototype Kit](https://github.com/alphagov/govuk-prototype-kit/pull/553)
 - [#557 Bump outdated dependencies](https://github.com/alphagov/govuk-prototype-kit/pull/557):
   - Update standard from 10.0.2 to 11.0.1 and fix violations
   - Update run-sequence from 1.2.2 to 2.2.1
